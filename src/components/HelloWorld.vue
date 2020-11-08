@@ -23,7 +23,7 @@
       </el-input>
     </el-menu-item> 
     <el-menu-item index="7">
-      <el-button type="danger" size="medium" plain>创作中心</el-button>
+      <router-link to='/views'><el-button type="danger" size="medium" plain>创作中心</el-button></router-link>
     </el-menu-item>
   </el-menu>
   <div class="line"></div>
