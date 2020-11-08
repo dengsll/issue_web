@@ -12,6 +12,7 @@
 </template>
 <script>
 import { quillEditor } from "vue-quill-editor"; //调用编辑器
+import {Particle} from "@/api/public"
 import 'quill/dist/quill.core.css';
 import 'quill/dist/quill.snow.css';
 import 'quill/dist/quill.bubble.css';
@@ -37,7 +38,19 @@ export default {
         publicArticle(){
             let article = {};
             article.content = this.content;
-            
+            article.classifyId=1;
+            article.articleId = 3;
+            article.title = "测试哦";
+            article.userId = 1;
+            article.createTime = new Date();
+            article.updateTime = new Date();
+            article.viewCount = 2;
+            article.favorCount = 2;
+            article.isValid = 1;
+            Particle(article).then(res => {
+                let result = this.res;
+            })
+
         }
     },
     computed: {
